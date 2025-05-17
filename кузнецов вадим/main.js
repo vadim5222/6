@@ -1,14 +1,8 @@
-
-const buttons = document.querySelectorAll(".filter-buttons button");
-const items = document.querySelectorAll(".item");
+const buttons = document.querySelectorAll(".buttons button");
+const items = document.querySelectorAll(".catalog-card");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-
-    buttons.forEach((btn) => btn.classList.remove("active"));
-
-    button.classList.add("active");
-
     const category = button.getAttribute("data-category");
 
     items.forEach((item) => {
@@ -20,3 +14,11 @@ buttons.forEach((button) => {
     });
   });
 });
+
+
+
+let burgerIcon = document.querySelector(".burger_menu");
+let burger = document.querySelector(".burger");
+burgerIcon.addEventListener("click", ()=>{
+    burger.classList.toggle("active")
+})
